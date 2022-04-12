@@ -28,7 +28,7 @@ const NotFound = () => {
 					<h1 className="text-4xl font-semibold"><span className="text-red-400">Oops!</span> {t('common:page_not_found')} </h1>
 					<p>{t('common:page_not_found_descr')}</p>
 				<Link href="/">
-						<a className="btn btn-primary">{t('common:back_home')}</a>
+						<a className="btn btn-primary inline-block">{t('common:back_home')}</a>
 				</Link>
 			</div>
 

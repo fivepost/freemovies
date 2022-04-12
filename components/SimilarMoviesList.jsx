@@ -29,16 +29,16 @@ const SimilarMoviesList = ({ movies }) => {
 				modules={[ Pagination, Autoplay]}
 				breakpoints={{
 					320: {
-						slidesPerView: 2,
+						slidesPerView: 1.5,
 						spaceBetween: 12
 					},
 					480: {
-						slidesPerView: 3,
+						slidesPerView: 2,
 						spaceBetween: 15
 					},
 					640: {
-						slidesPerView: 4,
-						spaceBetween: 20
+						slidesPerView: 3,
+						spaceBetween: 15
 					},
 					768: {
 						slidesPerView: 5,
