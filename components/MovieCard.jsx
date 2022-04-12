@@ -12,7 +12,7 @@ import 'moment/locale/ru';
 const MovieCard = ({ movie }) => {
 
 	const router = useRouter();
-	const [dateLocale, setDateLocale] = useState('router.locale')
+	const [dateLocale, setDateLocale] = useState(router.locale)
 	useEffect(() => {
 		setDateLocale(router.locale)
 	},
