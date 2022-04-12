@@ -13,7 +13,7 @@ const SimilarMoviesList = ({ movies }) => {
 
 	return (
 		<div className="container mx-auto px-0 md:px-2 mb-3">
-			<h1 className='mt-8 mb-5 text-2xl color-black dark:color-white'>{t('similar_movies')}</h1>
+			<h1 className='mt-8 mb-5 text-2xl px-2 md:px-0 color-black dark:color-white'>{t('similar_movies')}</h1>
 			<Swiper
 				spaceBetween={20}
 				slidesPerView={1.2}
