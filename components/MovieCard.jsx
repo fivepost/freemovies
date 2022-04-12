@@ -38,7 +38,7 @@ const MovieCard = ({ movie }) => {
 							<Moment locale={dateLocale} format='LL'>{movie.release_date}</Moment>
 						</p>
 					</div>
-					<span className="flex rounded-l-sm font-semibold items-center text-center transition-all opacity-0 translate-x-full group-hover:translate-x-0 ease-out group-hover:opacity-100 duration-500 bg-yellow-300 px-5 py-2 text-sm absolute right-0 top-5">
+					<span className="flex rounded-l-sm font-semibold items-center text-center transition-all opacity-0 translate-x-full group-hover:translate-x-0 ease-out group-hover:opacity-100 duration-500 bg-yellow-300 px-2 py-1 md:px-5 md:py-2 text-sm absolute right-0 top-5">
 						<AiTwotoneStar className="mr-1" size="16" />
 						{+movie.vote_average.toFixed(1)}</span>
 				</div>
