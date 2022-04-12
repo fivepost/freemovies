@@ -21,7 +21,7 @@ export default function Movies({ movies, page }) {
 					pathname: '/movies',
 					query: { page: page - 1}
 				}}>
-					<a className="btn btn-primary flex items-center flex-nowrap "><FiChevronLeft size={20} /> <span className="pr-2">{t('common:prev')}</span></a>
+					<a className="btn btn-primary flex items-center text-white flex-nowrap "><FiChevronLeft size={20} /> <span className="pr-2">{t('common:prev')}</span></a>
 				</Link>}
 
 				{page <=499 &&
@@ -29,7 +29,7 @@ export default function Movies({ movies, page }) {
 						pathname: '/movies',
 						query: { page: page + 1 }
 					}}>
-						<a className="btn btn-primary flex items-center flex-nowrap	"><span className="pl-2">{t('common:next')} </span><FiChevronRight size={20} /> </a>
+						<a className="btn btn-primary text-white flex items-center flex-nowrap	"><span className="pl-2">{t('common:next')} </span><FiChevronRight size={20} /> </a>
 					</Link>
 				}
 

@@ -13,7 +13,7 @@ const Hero = () => {
 			<h1 className='text-2xl text-gray-700 uppercase font-bold dark:text-gray-200'>{t('common:greetings')}</h1>
 			<p className='text-gray-500 dark:text-white'>{t('common:site_descr')}</p>
 				<Link href='/contacts'>
-				<a className='btn btn-primary inline-block'>{t('common:contact_us')}</a>
+				<a className='btn btn-primary text-white inline-block'>{t('common:contact_us')}</a>
 				</Link>
 		</div>
 	)

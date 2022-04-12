@@ -16,7 +16,7 @@ export default function Home({ movies }) {
       <MovieList movies={movies.results} />
       <div className="text-center">
         <Link href="/movies">
-          <a className="btn btn-primary mb-4 inline-block">{t('common:more_movies')}</a>
+          <a className="btn btn-primary mb-4 text-white inline-block">{t('common:more_movies')}</a>
         </Link>
       </div>
     </Layout>
