@@ -45,7 +45,6 @@ export async function getServerSideProps(ctx) {
 	const res = await axios(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}&language=${lang}S&page=${page}`)
 	const totalPages = res.totalPages
 	const movies = res.data
-	console.log(res);
 	return {
 		props: { movies, page }
 	}

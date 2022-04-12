@@ -5,14 +5,12 @@ import styles from './MainSlider.module.css'
 
 const MainSlider = () => {
 	return (
-		
-			<Swiper
-				spaceBetween={50}
-				slidesPerView={1}
-				onSlideChange={() => console.log('slide change')}
-				onSwiper={(swiper) => console.log(swiper)}
-			>
-				<SwiperSlide>
+
+		<Swiper
+			spaceBetween={50}
+			slidesPerView={1}
+>
+			<SwiperSlide>
 				<div className={styles.slide}>
 					<div className="container mx-auto p-2">
 						<Image
@@ -31,22 +29,22 @@ const MainSlider = () => {
 							</div>
 							<div className="  md:flex-col sm:hidden md:flex  self-center content-center">
 								<div className="w-5/12">
-								<Image
-									width={334}
-									height={500}
-									layout="responsive"
-									className="rounded-md "
-									placeholder="blur"
-									blurDataURL="/blur-placeholder2.jpg"
+									<Image
+										width={334}
+										height={500}
+										layout="responsive"
+										className="rounded-md "
+										placeholder="blur"
+										blurDataURL="/blur-placeholder2.jpg"
 										src={`/placeholder-poster.webp`} />
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				</SwiperSlide>
-				
-			</Swiper>
+			</SwiperSlide>
+
+		</Swiper>
 
 	)
 }

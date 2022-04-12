@@ -13,7 +13,6 @@ const Header = () => {
 	const [mounted, setMounted] = useState(false);
 	const { theme, setTheme } = useTheme();
 	const { asPath, locale } = useRouter();
-	console.log(locale);
 
 	useEffect(() => {
 		setMounted(true)

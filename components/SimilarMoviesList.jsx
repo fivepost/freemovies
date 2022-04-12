@@ -18,14 +18,9 @@ const SimilarMoviesList = ({ movies }) => {
 				spaceBetween={20}
 				slidesPerView={1.2}
 				draggable={true}
-				autoPlay={true}
 				loop={true}
 				freeMode={true}
 				centeredSlides={true}
-				autoplay={{
-					delay: 5000,
-					disableOnInteraction: true,
-				}}
 				modules={[ Pagination, Autoplay]}
 				breakpoints={{
 					320: {

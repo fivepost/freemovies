@@ -17,7 +17,7 @@ const MovieDetail = ({ movie, trailer, actors }) => {
 	const { t } = useTransition()
 	const router = useRouter();
 	const [dateLocale, setDateLocale] = useState(router.locale)
-
+	let cropUrl = /(?:[\w-]+\.)+[\w-]+/
 
 	useEffect(() => {
 		setDateLocale(router.locale)
@@ -59,7 +59,7 @@ const MovieDetail = ({ movie, trailer, actors }) => {
 						</span>
 					</p>
 					<p className="text-gray-600 dark:text-white text-sm ">{t('common:release_date')}:  <span className="font-semibold"><Moment locale={dateLocale} format='LL'>{movie.release_date}</Moment></span></p>
-					{!!movie.homepage && <p className="text-gray-600 dark:text-white text-sm mt-2">{t('common:website')}: <a href={movie.homepage} className="text-blue-400 underline" target="_blank">{movie.homepage}</a></p>}
+					{!!movie.homepage && <p className="text-gray-600 dark:text-white text-sm mt-2">{t('common:website')}: <a href={movie.homepage} className="text-blue-400 underline" target="_blank">{cropUrl.exec(movie.homepage)}</a></p>}
 					{!!trailer.length && <button onClick={() => setShowModal(true)} className="inline-flex bg-red-400 hover:bg-red-500 items-center text-white uppercase py-3 px-6 text-sm mt-4 rounded  visited:text-white transition-colors"
 					><BsPlayCircle
 							className="mr-2"
