@@ -54,8 +54,8 @@ const SimilarMoviesList = ({ movies }) => {
 				}}
 			>
 				{movies.map(movie => (
-					<SwiperSlide>
-						<MovieCard movie={movie} key={movie.id} />
+					<SwiperSlide key={movie.id}>
+						<MovieCard movie={movie}  />
 					</SwiperSlide>
 				)
 				)}
