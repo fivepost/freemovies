@@ -12,7 +12,7 @@ const SimilarMoviesList = ({ movies }) => {
 	const { t } = useTransition('common')
 
 	return (
-		<div className="container mx-auto px-2 mb-3">
+		<div className="container mx-auto px-0 md:px-2 mb-3">
 			<h1 className='mt-8 mb-5 text-2xl color-black dark:color-white'>{t('similar_movies')}</h1>
 			<Swiper
 				spaceBetween={20}
