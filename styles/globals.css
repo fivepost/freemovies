@@ -17,7 +17,7 @@ body {
 
 @layer global {
   .btn {
-    @apply text-white dark:text-white uppercase py-3 px-6 text-sm mt-4 rounded inline-block visited:text-white transition-colors;
+    @apply text-white dark:text-white uppercase py-3 px-6 text-sm mt-4 rounded  visited:text-white transition-colors;
   }
 
   .btn-primary {

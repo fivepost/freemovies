@@ -14,7 +14,7 @@ const Contacts = () => {
 					<Image src="/contact.svg" width={240} height={240} layout='responsive' />
 				</div>
 				<Link href='/'>
-					<a className="btn btn-secondary">{t('common:back_home')}</a>
+					<a className="btn btn-secondary inline-block">{t('common:back_home')}</a>
 				</Link>
 			</div>
 		</Layout>

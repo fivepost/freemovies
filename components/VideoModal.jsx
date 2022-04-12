@@ -33,6 +33,7 @@ const VideoModal = ({ showModal, setShowModal, videoPath }) => {
 					animate="visible"
 					initial="hidden"
 					exit="hidden"
+					onClick={closeModal}
 				>
 
 					<div className=" aspect-video relative w-full scale-[0.95] lg:scale-[0.65]  " onClick={(e) => e.stopPropagation()} >
