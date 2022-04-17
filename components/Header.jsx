@@ -23,7 +23,7 @@ const Header = () => {
 	}
 
 	return (
-		<header className="bg-gray-500 sticky top-0 z-50 dark:bg-gray-700 p-2 text-white">
+		<header className="bg-gray-500/80 sticky top-0 z-50 backdrop-blur-md	 dark:bg-gray-700/80 p-2 text-white">
 			<div className="flex container mx-auto px-2 justify-between items-center">
 				<Link href="/">
 					<a>
