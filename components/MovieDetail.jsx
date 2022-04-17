@@ -34,6 +34,7 @@ const MovieDetail = ({ movie, trailer, actors }) => {
 				<div className="lg:col-span-3">
 					<div className="relative ">
 						<Image height={608}
+							key={movie.id}
 							width={1080}
 							layout='responsive'
 							className="rounded-md"
