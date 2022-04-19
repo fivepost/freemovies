@@ -8,7 +8,7 @@ const SearchModal = ({ showModal, setShowModal }) => {
 
 	useEffect(() => {
 		let body = document.body
-		if (1) {
+		if (showModal) {
 			body.classList.add('lock')
 		}
 		return () => body.classList.remove('lock')
@@ -25,7 +25,7 @@ const SearchModal = ({ showModal, setShowModal }) => {
 
 	return (
 		<AnimatePresence exitBeforeEnter>
-			{1 &&
+			{showModal &&
 				<motion.div
 					className="fixed flex items-center justify-center top-0 left-0 bg-black/80 dark:bg-black/50 w-full h-full z-[111] backdrop-blur-sm"
 					variants={overlay}
@@ -33,9 +33,18 @@ const SearchModal = ({ showModal, setShowModal }) => {
 					initial="hidden"
 					exit="hidden"
 				>
-					<div className="container  h-full p-2" onClick={(e) => e.stopPropagation()} >
-						<input placeholder="Type some movie..." type="text" className="my-7 w-full border border-slate-300 focus:border-slate-400  p-2 rounded-md bg-transparent text-white" />
-						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
+					<div className="container overflow-y-auto no-scrollbar  h-full p-2" onClick={(e) => e.stopPropagation()} >
+						<input placeholder="Type some movie..." type="text" className="my-7 w-full border border-slate-300 focus:border-slate-400  p-2 sm:p-3 rounded-md bg-transparent text-white" />
+						<div className="grid grid-cols-1  lg:grid-cols-2 xl:grid-cols-3 gap-2 sm:gap-3">
+							<SearchCard/>
+							<SearchCard/>
+							<SearchCard/>
+							<SearchCard/>
+							<SearchCard/>
+							<SearchCard/>
+							<SearchCard/>
+							<SearchCard/>
+							<SearchCard/>
 							<SearchCard/>
 							<SearchCard/>
 							<SearchCard/>
