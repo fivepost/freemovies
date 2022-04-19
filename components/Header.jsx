@@ -2,21 +2,20 @@ import React from 'react'
 import Link from 'next/link';
 import Image from "next/image"
 
-import { useTheme } from "next-themes";
-import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
-import { BsSun, BsMoonStars } from "react-icons/bs";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
+import { FiSearch } from "react-icons/fi";
+
 
 import HeaderNav from './HeaderNav';
+import ThemeSwitcher from './ThemeSwitcher';
+import LangSwitcher from './LangSwitcher';
 
 
 const Header = () => {
 	const [mounted, setMounted] = useState(false);
 	const [showMenu, setShowMenu] = useState(false);
-	const { theme, setTheme } = useTheme();
-	const { asPath, locale } = useRouter();
 
 	const closeMenu = () => {
 		setShowMenu(false)
@@ -46,23 +45,13 @@ const Header = () => {
 						<Image src="/logo.png" width={50} height={40} />
 					</a>
 				</Link>
-
 				<HeaderNav showMenu={showMenu} closeMenu={closeMenu} />
-
 				<div className="flex items-center ml-auto">
-					<button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} className="mr-5 inline-block">
-						{
-							theme === 'light' ?
-								<BsSun color="white" fontSize="24px" />
-								: <BsMoonStars color="white" fontSize="20px" />
-						}
+					<button className='mr-1  text-white hover:bg-slate-300/30 rounded-md p-2 transition'>
+						<FiSearch size={20} />
 					</button>
-					<Link href={asPath} locale="ru" >
-						<a className={`inline-block  text-sm text-white  rounded-l-md px-3 py-1  ${locale === 'ru' ? 'bg-red-400' : 'bg-slate-300 text-black/40'} `}>RU</a>
-					</Link>
-					<Link href={asPath} locale="en" >
-						<a className={`inline-block  text-sm text-white  rounded-r-md px-3 py-1 ${locale === 'en' ? 'bg-red-400' : 'bg-slate-300 text-black/40'}`}>EN</a>
-					</Link>
+					<ThemeSwitcher />
+					<LangSwitcher />
 				</div>
 			</div>
 
