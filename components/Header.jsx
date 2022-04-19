@@ -37,8 +37,8 @@ const Header = () => {
 	return (
 		<header className="bg-gray-500/80 sticky top-0 z-50 backdrop-blur-md	 dark:bg-gray-700/80 p-2 text-white">
 			<div className="flex container mx-auto   items-center">
-				<button onClick={openMenu} className='sm:hidden text-white mr-3 hover:bg-slate-300/30 rounded-sm p-1 transition' >
-					<HiOutlineMenuAlt1 size={24} />
+				<button onClick={openMenu} className='sm:hidden text-white mr-3 bg-slate-100/10 hover:bg-slate-300/30 rounded-md p-2 transition' >
+					<HiOutlineMenuAlt1 size={20} />
 				</button>
 				<Link href="/">
 					<a>

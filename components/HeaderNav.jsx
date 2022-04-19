@@ -10,14 +10,14 @@ const HeaderNav = ({ showMenu, closeMenu }) => {
 			<ul onClick={(e) => e.stopPropagation()} className={`flex absolute top-0 right-0  ${!showMenu ? 'translate-x-full' : ''}  sm:translate-x-0 transition sm:transition-none bg-white w-64 h-full flex-col pt-20 sm:bg-transparent sm:p-0 sm:flex-row sm:gap-2 sm:static sm:h-auto sm:w-auto`} >
 			<li className="border-b border-t sm:border-none">
 				<Link href="/movies">
-					<a onClick={closeMenu} className="md:ml-8 text-sm w-full font-medium px-2 py-3 inline-block text-black sm:text-white sm:p-0">
+					<a onClick={closeMenu} className="md:ml-8 text-sm w-full font-medium px-2 py-3 inline-block text-black sm:text-white sm:hover:text-red-400 transition sm:p-0">
 						{t('movies')}
 					</a>
 				</Link>
 			</li>
 			<li className="border-b  sm:border-none">
 				<Link href="/series">
-					<a onClick={closeMenu} className="md:ml-4 text-sm w-full font-medium px-2 py-3 inline-block text-black sm:text-white sm:p-0">
+					<a onClick={closeMenu} className="md:ml-4 text-sm w-full font-medium px-2 py-3 inline-block text-black sm:text-white sm:hover:text-red-400 transition sm:p-0">
 						{t('series')}
 					</a>
 				</Link>

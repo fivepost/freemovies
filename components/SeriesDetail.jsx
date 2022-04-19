@@ -19,6 +19,8 @@ const MovieDetail = ({ serie, trailer, actors }) => {
 	const [dateLocale, setDateLocale] = useState(router.locale)
 	let cropUrl = /(?:[\w-]+\.)+[\w-]+/
 
+	console.log(serie);
+
 	useEffect(() => {
 		setDateLocale(router.locale)
 	},
@@ -52,6 +54,10 @@ const MovieDetail = ({ serie, trailer, actors }) => {
 					<p className="text-gray-600 dark:text-white text-sm mt-4">
 						{t('common:genres')}: <span className="font-semibold">
 							{serie.genres.map(genre => genre.name).join(', ')}
+						</span>
+					</p>
+					<p className="text-gray-600 dark:text-white text-sm mb-4">
+						{t('common:seasons_count')}:	<span className="font-semibold"> {serie.number_of_seasons}
 						</span>
 					</p>
 					<p className="text-gray-600 dark:text-white text-sm ">
