@@ -31,9 +31,9 @@ const MovieCard = ({ movie }) => {
 						height="1050"
 						layout='responsive'
 						placeholder="blur"
-						blurDataURL="/blur-placeholder2.jpg"/>
+						blurDataURL="/blur-placeholder2.jpg" />
 					<div className="px-4 py-4 absolute right-0 bottom-0 backdrop-blur-md bg-black/25 w-full duration-400 ease-out  bg-opacity-50 transition-all translate-y-full group-hover:translate-y-0">
-						<h1 className="font-bold text-sm md:text-xl mb-2 text-white">{movie.title}</h1>
+						<h1 className="font-bold text-sm md:text-xl mb-2 text-white">{movie.title ? movie.title : movie.name}</h1>
 						<p className="text-white text-xs   md:text-sm">
 							<Moment locale={dateLocale} format='LL'>{movie.release_date}</Moment>
 						</p>

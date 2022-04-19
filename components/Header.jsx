@@ -7,13 +7,25 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 import { BsSun, BsMoonStars } from "react-icons/bs";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
+
 import HeaderNav from './HeaderNav';
 
 
 const Header = () => {
 	const [mounted, setMounted] = useState(false);
+	const [showMenu, setShowMenu] = useState(false);
 	const { theme, setTheme } = useTheme();
 	const { asPath, locale } = useRouter();
+
+	const closeMenu = () => {
+		setShowMenu(false)
+	}
+
+
+	const openMenu = () => {
+		setShowMenu(true)
+	}
 
 	useEffect(() => {
 		setMounted(true)
@@ -25,14 +37,17 @@ const Header = () => {
 
 	return (
 		<header className="bg-gray-500/80 sticky top-0 z-50 backdrop-blur-md	 dark:bg-gray-700/80 p-2 text-white">
-			<div className="flex container mx-auto px-2  items-center">
+			<div className="flex container mx-auto   items-center">
+				<button onClick={openMenu} className='sm:hidden text-white mr-3 hover:bg-slate-300/30 rounded-sm p-1 transition' >
+					<HiOutlineMenuAlt1 size={24} />
+				</button>
 				<Link href="/">
 					<a>
 						<Image src="/logo.png" width={50} height={40} />
 					</a>
 				</Link>
 
-				<HeaderNav />
+				<HeaderNav showMenu={showMenu} closeMenu={closeMenu} />
 
 				<div className="flex items-center ml-auto">
 					<button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} className="mr-5 inline-block">

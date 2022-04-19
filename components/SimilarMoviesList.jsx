@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from "swiper";
 import MovieCard from './MovieCard';
+import SeriesCard from './SeriesCard';
 import 'swiper/css';
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -52,7 +53,10 @@ const SimilarMoviesList = ({ movies }) => {
 			>
 				{movies.map(movie => (
 					<SwiperSlide key={movie.id}>
-						<MovieCard movie={movie}  />
+						{movie.title ? <MovieCard movie={movie} /> :
+							<SeriesCard serie={movie} />
+
+						}
 					</SwiperSlide>
 				)
 				)}
