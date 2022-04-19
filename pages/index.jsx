@@ -2,13 +2,13 @@ import axios from "axios";
 import Hero from "../components/Hero";
 import Layout from './../components/Layout';
 import MovieList from './../components/MovieList';
-import useTransition from "next-translate/useTranslation"
+import useTranslation from "next-translate/useTranslation"
 import Link from 'next/link'
 
 
 
 export default function Home({ movies }) {
-  const { t } = useTransition()
+  const { t } = useTranslation()
 
   return (
     <Layout title={ t('common:home_page') }>

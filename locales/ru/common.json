@@ -6,15 +6,18 @@
 	"back_home": "На главную",
 	"our_contacts": "Наши контакты",
 	"page_not_found": "Страница не найдена",
-	"page_not_found_descr":"Запрошенная страница не существует.",
-	"genres":"Жанры",
+	"page_not_found_descr": "Запрошенная страница не существует.",
+	"genres": "Жанры",
 	"rating": "Рейтинг",
-	"release_date":"Дата Выхода",
+	"release_date": "Дата Выхода",
 	"website": "Сайт",
 	"watch_trailer": "Смотреть Трейлер",
 	"home_page": "Главная",
 	"next": "Вперед",
 	"prev": "Назад",
-	"more_movies":"Больше фильмов",
-	"similar_movies":"Похожие Фильмы"
+	"more_movies": "Больше фильмов",
+	"similar_movies": "Похожие Фильмы",
+	"movies": "Фильмы",
+	"series": "Сериалы",
+	"popular_series": "Популярные Сериалы"
 }

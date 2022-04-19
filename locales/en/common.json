@@ -16,6 +16,9 @@
 	"next":"Next",
 	"prev":"Prev",
 	"more_movies": "More movies",
-	"similar_movies": "Similar Movies"
+	"similar_movies": "Similar Movies",
+	"movies": "Movies",
+	"series": "Series",
+	"popular_series": "Популярные Сериалы"
 
 }

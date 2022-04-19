@@ -2,12 +2,12 @@ import React from 'react'
 import Link from 'next/link';
 import { useRouter } from "next/router"
 import { useEffect } from 'react';
-import useTransition from "next-translate/useTranslation"
+import useTranslation from "next-translate/useTranslation"
 import  Head  from 'next/head';
 
 const NotFound = () => {
 	const router = useRouter();
-	const { t } = useTransition()
+	const { t } = useTranslation()
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			router.push('/')

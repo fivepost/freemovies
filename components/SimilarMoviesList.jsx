@@ -5,11 +5,11 @@ import 'swiper/css';
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-import useTransition from "next-translate/useTranslation"
+import useTranslation from "next-translate/useTranslation"
 
 
 const SimilarMoviesList = ({ movies }) => {
-	const { t } = useTransition('common')
+	const { t } = useTranslation('common')
 
 	return (
 		<div className="container mx-auto px-0 md:px-2 mb-3">

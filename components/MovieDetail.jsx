@@ -5,7 +5,7 @@ import Moment from 'react-moment'
 import VideoModal from './VideoModal';
 import ActorsSidebar from './ActorsSidebar';
 
-import useTransition from "next-translate/useTranslation"
+import useTranslation from "next-translate/useTranslation"
 
 import { BsPlayCircle } from "react-icons/bs";
 import 'moment/locale/ru';
@@ -14,7 +14,7 @@ import 'moment/locale/ru';
 
 const MovieDetail = ({ movie, trailer, actors }) => {
 	const [showModal, setShowModal] = useState(false)
-	const { t } = useTransition()
+	const { t } = useTranslation()
 	const router = useRouter();
 	const [dateLocale, setDateLocale] = useState(router.locale)
 	let cropUrl = /(?:[\w-]+\.)+[\w-]+/

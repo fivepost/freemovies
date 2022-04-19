@@ -1,11 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
 import Layout from "../components/Layout"
-import useTransition from "next-translate/useTranslation"
+import useTranslation from "next-translate/useTranslation"
 
 
 const Contacts = () => {
-	const { t } = useTransition()
+	const { t } = useTranslation()
 	return (
 		<Layout title={t('common:our_contacts')}>
 			<div className="text-center bg-white dark:bg-zinc-800 pb-10">

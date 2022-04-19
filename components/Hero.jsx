@@ -1,10 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import  useTransition  from "next-translate/useTranslation"
+import  useTranslation  from "next-translate/useTranslation"
 
 const Hero = () => {
-	const {t} = useTransition()
+	const {t} = useTranslation()
 	return (
 		<div className="text-center bg-white dark:bg-zinc-800 pb-10">
 			<div className="w-60 mx-auto">
